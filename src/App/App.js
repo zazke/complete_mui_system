@@ -1,3 +1,9 @@
+/*
+$ npm install
+$ npm install @mui/material @emotion/react @emotion/styled
+$ npm install @mui/styles
+ */
+
 import React from 'react'
 import './App.css';
 import SideMenu from '../components/SideMenu';
@@ -5,8 +11,7 @@ import { makeStyles } from '@mui/styles';
 import Header from '../components/Header';
 import { CssBaseline } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import PageHeader from '../components/PageHeader';
-import AdbIcon from '@mui/icons-material/Adb';
+import Employees from "../pages/Employees/Employees";
 
 const theme = createTheme({
   palette: {
@@ -25,7 +30,7 @@ const theme = createTheme({
     }
   },
   shape: {
-    borderRadius: '12px'
+    borderRadius: '4px'
   },
   overrides: {
     MuiAppBar: {
@@ -57,11 +62,7 @@ function App() {
       <SideMenu />
       <div className={classes.appMain}>
         <Header />
-        <PageHeader
-          title="Page Header"
-          subtitle="Page Description"
-          icon={<AdbIcon fontSize="large"/>}
-        />
+        <Employees />
       </div>
       <CssBaseline />
     </ThemeProvider>

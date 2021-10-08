@@ -26,7 +26,7 @@ export default function Header() {
     return (
          <AppBar position="static" 
             sx={{
-                bgcolor: '#fff',
+                bgcolor: 'secundary',
                 boxShadow: 1,
                 transform: 'translateZ(0)'
             }}>
